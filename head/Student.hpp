@@ -3,11 +3,7 @@ using namespace std;
 
 class Student{
     public:
-    Student();
-    void addStudnetInfo(long,string,int);
-    void deleteStudentInfo(long);
-    void editStudnetInfo(long);
-    long getStudnetID();
+    Student(long=0,string="default",int=0);
     string getStudentName();
     int getStudentScore();
     private:
@@ -16,11 +12,10 @@ class Student{
     int studentScore;
 };
 
-Student::Student(){
-
-}
-long Student::getStudnetID(){
-    return this->studentID;
+Student::Student(long id,string name,int score){
+    this->studentID=id>0?id:0;
+    this->studnetName=name;
+    this->studentScore=score>0?score:0;
 }
 string Student::getStudentName(){
     return this->studnetName;
