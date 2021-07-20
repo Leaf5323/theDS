@@ -9,9 +9,9 @@ class StudentsDatabase{
     Student* findTarget(long);
     Student* findPre(long);
     void addStudent();
-    void deleteStudent();
-    void inquiryStudentInfo();
-    void editStudentInfo();
+    int deleteStudent();
+    int inquiryStudentInfo();
+    int editStudentInfo();
     Student* getHead();
     private:
     Student* head;
@@ -93,7 +93,7 @@ void StudentsDatabase::addStudent(){
     ptr3->setTheNext(NULL);
     ptr2->setTheNext(ptr3);
 }
-void StudentsDatabase::deleteStudent(){
+int StudentsDatabase::deleteStudent(){
     Student* ptr1=NULL;
     Student* ptr2=NULL;
     Student* ptr3=NULL;
@@ -101,20 +101,30 @@ void StudentsDatabase::deleteStudent(){
     cout<<"请输入删除学生的学号：";
     cin>>tempID;
     ptr1=this->findTarget(tempID);
+    if(ptr1==NULL){
+        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        return 1;
+    }
     ptr2=this->findPre(tempID);
     ptr2->setTheNext(ptr1->getNext());
     delete ptr1;
+    return 0;
 }
-void StudentsDatabase::inquiryStudentInfo(){
+int StudentsDatabase::inquiryStudentInfo(){
     long tempID;
-    cout<<"请输入要查询的"<<endl;
+    cout<<"请输入要查询的学号："<<endl;
     cin>>tempID;
     Student* ptr=this->findTarget(tempID);
+    if(ptr==NULL){
+        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        return 1;
+    }
     cout<<"查询结果："<<endl
         <<"学生姓名："<<ptr->getStudentName()<<endl
-        <<"学生成绩："<<ptr->getStudentName()<<endl;
+        <<"学生成绩："<<ptr->getStudentScore()<<endl;
+    return 0;
 }
-void StudentsDatabase::editStudentInfo(){
+int StudentsDatabase::editStudentInfo(){
     Student* ptr=NULL;
     int choice=0;
     long tempID;
@@ -123,6 +133,10 @@ void StudentsDatabase::editStudentInfo(){
     cout<<"请输入要修改的学号："<<endl;
     cin>>tempID;
     ptr=this->findTarget(tempID);
+    if(ptr==NULL){
+        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        return 1;
+    }
     cout<<"请选择要修改的内容："<<endl
         <<"1)学生姓名"<<endl
         <<"2)学生成绩"<<endl
@@ -144,6 +158,8 @@ void StudentsDatabase::editStudentInfo(){
             cout<<"已修改学生成绩。"<<endl;
             break;
         case 3:
-            exit();
-    }   
+            cout<<"正在返回..."<<endl;
+            break;
+    }
+    return 0;  
 }
