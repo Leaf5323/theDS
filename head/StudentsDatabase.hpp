@@ -6,37 +6,59 @@ class StudentsDatabase{
     public:
     StudentsDatabase(int);
     ~StudentsDatabase();
-    string getStudentName(long);
-    int getStudentScore(long);
+    void addStudent();
+    Student* getHead();
     private:
-    Student* students;
-    int size;
+    Student* head;
 };
 
-StudentsDatabase::StudentsDatabase(int s){
-    this->size=s>0?s:1;
-    cout<<"请输入"<<this->size<<"位学生信息："<<endl;
-    this->students=new Student[this->size];
+StudentsDatabase::StudentsDatabase(int count){
+    this->head=NULL;
+    Student* p=NULL;
+    Student* q=NULL;
+    q=new Student;
+    this->head=q;
     long tempID;
     string tempName;
     int tempScore;
-    for(int i=0;i<this->size;i++){
-        cout<<"学生"<<i+1<<"学号：";
+    for(int i=0;i<count;i++){
+        cout<<"请输入第"<<i+1<<"位学生学号：";
         cin>>tempID;
-        cout<<"学生"<<i+1<<"姓名：";
+        cout<<"请输入第"<<i+1<<"位学生姓名：";
         cin>>tempName;
-        cout<<"学生"<<i+1<<"成绩：";
+        cout<<"请输入第"<<i+1<<"位学生成绩：";
         cin>>tempScore;
-        this->students[i].~Student();
-        this->students[i]=Student(tempID,tempName,tempScore);
+        p=q;
+        q=new Student(tempID,tempName,tempScore);
+        q->setTheNext(NULL);
+        p->setTheNext(q);
     }
 }
 StudentsDatabase::~StudentsDatabase(){
-    delete[]this->students;
+    
 }
-string StudentsDatabase::getStudentName(long id){
-    return this->students[id].getStudentName();
+Student* StudentsDatabase::getHead(){
+    return this->head;
 }
-int StudentsDatabase::getStudentScore(long id){
-    return this->students[id].getStudentScore();
+void StudentsDatabase::addStudent(){
+    Student* ptr1=NULL;
+    Student* ptr2=NULL;
+    Student* ptr3=NULL;
+    long tempID;
+    string tempName;
+    int tempScore;
+    ptr1=this->getHead()->getNext();
+    while(ptr1){
+        ptr2=ptr1;
+        ptr1=ptr1->getNext();
+    }
+    cout<<"请输入第要添加的学生学号：";
+    cin>>tempID;
+    cout<<"请输入第要添加的学生姓名：";
+    cin>>tempName;
+    cout<<"请输入第要添加的学生成绩：";
+    cin>>tempScore;
+    ptr3=new Student(tempID,tempName,tempScore);
+    ptr3->setTheNext(NULL);
+    ptr2->setTheNext(ptr3);
 }

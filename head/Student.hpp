@@ -6,10 +6,13 @@ class Student{
     Student(long=0,string="default",int=0);
     string getStudentName();
     int getStudentScore();
+    Student* setTheNext(Student*);
+    Student* getNext();
     private:
     long studentID;
     string studnetName;
     int studentScore;
+    Student* theNext;
 };
 
 Student::Student(long id,string name,int score){
@@ -22,4 +25,11 @@ string Student::getStudentName(){
 }
 int Student::getStudentScore(){
     return this->studentScore;
+}
+Student* Student::setTheNext(Student* next){
+    this->theNext=next;
+    return this->theNext;
+}
+Student* Student::getNext(){
+    return this->theNext;
 }
