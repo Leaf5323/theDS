@@ -4,6 +4,7 @@ using namespace std;
 class Student{
     public:
     Student(long=0,string="default",int=0);
+    long getStudentID();
     string getStudentName();
     int getStudentScore();
     Student* setTheNext(Student*);
@@ -19,6 +20,9 @@ Student::Student(long id,string name,int score){
     this->studentID=id>0?id:0;
     this->studnetName=name;
     this->studentScore=score>0?score:0;
+}
+long Student::getStudentID(){
+    return this->studentID;
 }
 string Student::getStudentName(){
     return this->studnetName;
