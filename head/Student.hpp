@@ -9,6 +9,8 @@ class Student{
     int getStudentScore();
     Student* setTheNext(Student*);
     Student* getNext();
+    void setStudentName(string);
+    void setStudentScore(int);
     private:
     long studentID;
     string studnetName;
@@ -36,4 +38,10 @@ Student* Student::setTheNext(Student* next){
 }
 Student* Student::getNext(){
     return this->theNext;
+}
+void Student::setStudentName(string newName){
+    this->studnetName=newName;
+}
+void Student::setStudentScore(int newScore){
+    this->studentScore=newScore;
 }

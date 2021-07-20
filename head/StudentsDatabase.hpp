@@ -11,6 +11,7 @@ class StudentsDatabase{
     void addStudent();
     void deleteStudent();
     void inquiryStudentInfo();
+    void editStudentInfo();
     Student* getHead();
     private:
     Student* head;
@@ -112,4 +113,37 @@ void StudentsDatabase::inquiryStudentInfo(){
     cout<<"查询结果："<<endl
         <<"学生姓名："<<ptr->getStudentName()<<endl
         <<"学生成绩："<<ptr->getStudentName()<<endl;
+}
+void StudentsDatabase::editStudentInfo(){
+    Student* ptr=NULL;
+    int choice=0;
+    long tempID;
+    string tempName;
+    int tempScore;
+    cout<<"请输入要修改的学号："<<endl;
+    cin>>tempID;
+    ptr=this->findTarget(tempID);
+    cout<<"请选择要修改的内容："<<endl
+        <<"1)学生姓名"<<endl
+        <<"2)学生成绩"<<endl
+        <<"3)返回上一级菜单"<<endl;
+    cin>>choice;
+    switch(choice){
+        case 1:
+            cout<<"当前学生姓名为："<<ptr->getStudentName()<<endl
+                <<"请输入修改的内容：";
+            cin>>tempName;
+            ptr->setStudentName(tempName);
+            cout<<"已修改学生姓名。"<<endl;
+            break;
+        case 2:
+            cout<<"当前学生成绩为："<<ptr->getStudentScore()<<endl
+                <<"请输入修改的内容：";
+            cin>>tempScore;
+            ptr->setStudentScore(tempScore);
+            cout<<"已修改学生成绩。"<<endl;
+            break;
+        case 3:
+            exit();
+    }   
 }
