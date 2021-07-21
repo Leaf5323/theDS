@@ -47,6 +47,17 @@ int enterChoice(){
             <<"##############################"<<endl;
         cout<<"请输入你的选择：";
         cin>>choice;
+        while(cin.fail()){
+            if(cin.fail()){
+                cin.clear();
+                cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
+                system("pause");
+                while(cin.get()!='\n'){
+                    continue;
+                }
+                cin>>choice;
+            }
+        }
     }
     return choice;
 }
