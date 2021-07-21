@@ -7,16 +7,16 @@ int enterChoice();
 void renderMenu();
 
 int main(){
-    system("title åˆå§‹åŒ–å­¦ç”Ÿä¿¡æ¯");
+    system("title ³õÊ¼»¯Ñ§ÉúĞÅÏ¢");
     int initSize;
-    cout<<"è¯·è¾“å…¥åˆå§‹å­¦ç”Ÿäººæ•°ï¼š";
+    cout<<"ÇëÊäÈë³õÊ¼Ñ§ÉúÈËÊı£º";
     cin>>initSize;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åé‡æ–°è¾“å…¥(å›è½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈİ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈİºóÖØĞÂÊäÈë(»Ø³µÒÔ¼ÌĞø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥åˆå§‹å­¦ç”Ÿäººæ•°ï¼š";
+            cout<<"ÇëÊäÈë³õÊ¼Ñ§ÉúÈËÊı£º";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -28,26 +28,26 @@ int main(){
     int input;
     while(!userExit){
         system("cls");
-        system("title ä¸»èœå•");
+        system("title Ö÷²Ëµ¥");
         switch(input=enterChoice()){
             case 1:
                 system("cls");
-                system("title æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯");
+                system("title ²éÑ¯Ñ§ÉúĞÅÏ¢");
                 studentDB.inquiryStudentInfo();
                 break;
             case 2:
                 system("cls");
-                system("title æ·»åŠ å­¦ç”Ÿä¿¡æ¯");
+                system("title Ìí¼ÓÑ§ÉúĞÅÏ¢");
                 studentDB.addStudent();
                 break;
             case 3:
                 system("cls");
-                system("title åˆ é™¤å­¦ç”Ÿä¿¡æ¯");
+                system("title É¾³ıÑ§ÉúĞÅÏ¢");
                 studentDB.deleteStudent();
                 break;
             case 4:
                 system("cls");
-                system("title ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯");
+                system("title ĞŞ¸ÄÑ§ÉúĞÅÏ¢");
                 studentDB.editStudentInfo();
                 break;
             case 5:
@@ -66,7 +66,7 @@ int enterChoice(){
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åé‡æ–°è¾“å…¥(å›è½¦ä»¥ç»§ç»­)"<<endl;
+                cout<<"ÊäÈëµÄÄÚÈİ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈİºóÖØĞÂÊäÈë(»Ø³µÒÔ¼ÌĞø)"<<endl;
                 system("pause>nul");
                 system("cls");
                 renderMenu();
@@ -81,12 +81,12 @@ int enterChoice(){
 }
 void renderMenu(){
     cout<<"##############################"<<endl
-        <<setw(20)<<setfill(' ')<<"ä¸»èœå•"<<endl;
-    cout<<"1)æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯"<<endl
-        <<"2)æ·»åŠ å­¦ç”Ÿä¿¡æ¯"<<endl
-        <<"3)åˆ é™¤å­¦ç”Ÿä¿¡æ¯"<<endl
-        <<"4)ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯"<<endl
-        <<"5)é€€å‡ºç³»ç»Ÿ"<<endl
+        <<setw(20)<<setfill(' ')<<"Ö÷²Ëµ¥"<<endl;
+    cout<<"1)²éÑ¯Ñ§ÉúĞÅÏ¢"<<endl
+        <<"2)Ìí¼ÓÑ§ÉúĞÅÏ¢"<<endl
+        <<"3)É¾³ıÑ§ÉúĞÅÏ¢"<<endl
+        <<"4)ĞŞ¸ÄÑ§ÉúĞÅÏ¢"<<endl
+        <<"5)ÍË³öÏµÍ³"<<endl
         <<"##############################"<<endl;
-    cout<<"è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š";
+    cout<<"ÇëÊäÈëÄãµÄÑ¡Ôñ£º";
 }

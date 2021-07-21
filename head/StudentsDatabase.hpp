@@ -27,42 +27,42 @@ StudentsDatabase::StudentsDatabase(int count){
     string tempName;
     int tempScore;
     for(int i=0;i<count;i++){
-        cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿå­¦å·ï¼š";
+        cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§ÉúÑ§ºÅ£º";
         cin>>tempID;
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+                cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
                 system("pause>nul");
-                cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿå­¦å·ï¼š";
+                cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§ÉúÑ§ºÅ£º";
                 while(cin.get()!='\n'){
                     continue;
                 }
                 cin>>tempID;
             }
         }
-        cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿå§“åï¼š";
+        cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§ÉúÐÕÃû£º";
         cin>>tempName;
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+                cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
                 system("pause>nul");
-                cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿå§“åï¼š";
+                cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§ÉúÐÕÃû£º";
                 while(cin.get()!='\n'){
                     continue;
                 }
                 cin>>tempName;
             }
         }
-        cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿæˆç»©ï¼š";
+        cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§Éú³É¼¨£º";
         cin>>tempScore;
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+                cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
                 system("pause>nul");
-                cout<<"è¯·è¾“å…¥ç¬¬"<<i+1<<"ä½å­¦ç”Ÿæˆç»©ï¼š";
+                cout<<"ÇëÊäÈëµÚ"<<i+1<<"Î»Ñ§Éú³É¼¨£º";
                 while(cin.get()!='\n'){
                     continue;
                 }
@@ -76,7 +76,7 @@ StudentsDatabase::StudentsDatabase(int count){
     }
 }
 StudentsDatabase::~StudentsDatabase(){
-    cout<<"æ­£åœ¨æ¸…ç†..."<<endl;
+    cout<<"ÕýÔÚÇåÀí..."<<endl;
 }
 Student* StudentsDatabase::getHead(){
     return this->head;
@@ -119,41 +119,41 @@ void StudentsDatabase::addStudent(){
         ptr2=ptr1;
         ptr1=ptr1->getNext();
     }
-    cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿå­¦å·ï¼š";
+    cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§ÉúÑ§ºÅ£º";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿå­¦å·ï¼š";
+            cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§ÉúÑ§ºÅ£º";
             while(cin.get()!='\n'){
                 continue;
             }
             cin>>tempID;
         }
     }
-    cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿå§“åï¼š";
+    cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§ÉúÐÕÃû£º";
     cin>>tempName;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿå§“åï¼š";
+            cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§ÉúÐÕÃû£º";
             while(cin.get()!='\n'){
                 continue;
             }
             cin>>tempName;
         }
     }
-    cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿæˆç»©ï¼š";
+    cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§Éú³É¼¨£º";
     cin>>tempScore;while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥ç¬¬è¦æ·»åŠ çš„å­¦ç”Ÿæˆç»©ï¼š";
+            cout<<"ÇëÊäÈëµÚÒªÌí¼ÓµÄÑ§Éú³É¼¨£º";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -163,7 +163,7 @@ void StudentsDatabase::addStudent(){
     ptr3=new Student(tempID,tempName,tempScore);
     ptr3->setTheNext(NULL);
     ptr2->setTheNext(ptr3);
-    cout<<"æ·»åŠ æˆåŠŸ~(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+    cout<<"Ìí¼Ó³É¹¦~(»Ø³µÒÔ¼ÌÐø)"<<endl;
     system("pause>nul");
 }
 int StudentsDatabase::deleteStudent(){
@@ -171,14 +171,14 @@ int StudentsDatabase::deleteStudent(){
     Student* ptr2=NULL;
     Student* ptr3=NULL;
     double tempID;
-    cout<<"è¯·è¾“å…¥åˆ é™¤å­¦ç”Ÿçš„å­¦å·ï¼š";
+    cout<<"ÇëÊäÈëÉ¾³ýÑ§ÉúµÄÑ§ºÅ£º";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥åˆ é™¤å­¦ç”Ÿçš„å­¦å·ï¼š";
+            cout<<"ÇëÊäÈëÉ¾³ýÑ§ÉúµÄÑ§ºÅ£º";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -187,27 +187,27 @@ int StudentsDatabase::deleteStudent(){
     }
     ptr1=this->findTarget(tempID);
     if(ptr1==NULL){
-        cout<<"æœªæŸ¥æ‰¾åˆ°å­¦ç”Ÿï¼Œè¯·æ£€æŸ¥è¾“å…¥çš„å­¦å·(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+        cout<<"Î´²éÕÒµ½Ñ§Éú£¬Çë¼ì²éÊäÈëµÄÑ§ºÅ(»Ø³µÒÔ¼ÌÐø)"<<endl;
         system("pause>nul");
         return 1;
     }
     ptr2=this->findPre(tempID);
     ptr2->setTheNext(ptr1->getNext());
     delete ptr1;
-    cout<<"åˆ é™¤æˆåŠŸ~(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+    cout<<"É¾³ý³É¹¦~(»Ø³µÒÔ¼ÌÐø)"<<endl;
     system("pause>nul");
     return 0;
 }
 int StudentsDatabase::inquiryStudentInfo(){
     double tempID;
-    cout<<"è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å­¦å·ï¼š";
+    cout<<"ÇëÊäÈëÒª²éÑ¯µÄÑ§ºÅ£º";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å­¦å·ï¼š";
+            cout<<"ÇëÊäÈëÒª²éÑ¯µÄÑ§ºÅ£º";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -216,14 +216,14 @@ int StudentsDatabase::inquiryStudentInfo(){
     }
     Student* ptr=this->findTarget(tempID);
     if(ptr==NULL){
-        cout<<"æœªæŸ¥æ‰¾åˆ°å­¦ç”Ÿï¼Œè¯·æ£€æŸ¥è¾“å…¥çš„å­¦å·(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+        cout<<"Î´²éÕÒµ½Ñ§Éú£¬Çë¼ì²éÊäÈëµÄÑ§ºÅ(»Ø³µÒÔ¼ÌÐø)"<<endl;
         system("pause>nul");
         return 1;
     }
-    cout<<"æŸ¥è¯¢ç»“æžœï¼š"<<endl
-        <<"å­¦ç”Ÿå§“åï¼š"<<ptr->getStudentName()<<endl
-        <<"å­¦ç”Ÿæˆç»©ï¼š"<<ptr->getStudentScore()<<endl
-        <<"(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+    cout<<"²éÑ¯½á¹û£º"<<endl
+        <<"Ñ§ÉúÐÕÃû£º"<<ptr->getStudentName()<<endl
+        <<"Ñ§Éú³É¼¨£º"<<ptr->getStudentScore()<<endl
+        <<"(»Ø³µÒÔ¼ÌÐø)"<<endl;
     system("pause>nul");
     return 0;
 }
@@ -233,14 +233,14 @@ int StudentsDatabase::editStudentInfo(){
     double tempID;
     string tempName;
     int tempScore;
-    cout<<"è¯·è¾“å…¥è¦ä¿®æ”¹çš„å­¦å·ï¼š";
+    cout<<"ÇëÊäÈëÒªÐÞ¸ÄµÄÑ§ºÅ£º";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+            cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
             system("pause>nul");
-            cout<<"è¯·è¾“å…¥è¦ä¿®æ”¹çš„å­¦å·ï¼š";
+            cout<<"ÇëÊäÈëÒªÐÞ¸ÄµÄÑ§ºÅ£º";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -249,27 +249,27 @@ int StudentsDatabase::editStudentInfo(){
     }
     ptr=this->findTarget(tempID);
     if(ptr==NULL){
-        cout<<"æœªæŸ¥æ‰¾åˆ°å­¦ç”Ÿï¼Œè¯·æ£€æŸ¥è¾“å…¥çš„å­¦å·(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+        cout<<"Î´²éÕÒµ½Ñ§Éú£¬Çë¼ì²éÊäÈëµÄÑ§ºÅ(»Ø³µÒÔ¼ÌÐø)"<<endl;
         system("pause>nul");
         return 1;
     }
-    cout<<"è¯·é€‰æ‹©è¦ä¿®æ”¹çš„å†…å®¹ï¼š"<<endl
-        <<"1)å­¦ç”Ÿå§“å"<<endl
-        <<"2)å­¦ç”Ÿæˆç»©"<<endl
-        <<"3)è¿”å›žä¸Šä¸€çº§èœå•"<<endl;
+    cout<<"ÇëÑ¡ÔñÒªÐÞ¸ÄµÄÄÚÈÝ£º"<<endl
+        <<"1)Ñ§ÉúÐÕÃû"<<endl
+        <<"2)Ñ§Éú³É¼¨"<<endl
+        <<"3)·µ»ØÉÏÒ»¼¶²Ëµ¥"<<endl;
     cin>>choice;
     switch(choice){
         case 1:
-            cout<<"å½“å‰å­¦ç”Ÿå§“åä¸ºï¼š"<<ptr->getStudentName()<<endl
-                <<"è¯·è¾“å…¥ä¿®æ”¹çš„å†…å®¹ï¼š";
+            cout<<"µ±Ç°Ñ§ÉúÐÕÃûÎª£º"<<ptr->getStudentName()<<endl
+                <<"ÇëÊäÈëÐÞ¸ÄµÄÄÚÈÝ£º";
             cin>>tempName;
             while(cin.fail()){
                 if(cin.fail()){
                     cin.clear();
-                    cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+                    cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
                     system("pause>nul");
-                    cout<<"å½“å‰å­¦ç”Ÿå§“åä¸ºï¼š"<<ptr->getStudentName()<<endl
-                        <<"è¯·è¾“å…¥ä¿®æ”¹çš„å†…å®¹ï¼š";
+                    cout<<"µ±Ç°Ñ§ÉúÐÕÃûÎª£º"<<ptr->getStudentName()<<endl
+                        <<"ÇëÊäÈëÐÞ¸ÄµÄÄÚÈÝ£º";
                     while(cin.get()!='\n'){
                         continue;
                     }
@@ -277,19 +277,19 @@ int StudentsDatabase::editStudentInfo(){
                 }
             }
             ptr->setStudentName(tempName);
-            cout<<"å·²ä¿®æ”¹å­¦ç”Ÿå§“åã€‚"<<endl;
+            cout<<"ÒÑÐÞ¸ÄÑ§ÉúÐÕÃû¡£"<<endl;
             break;
         case 2:
-            cout<<"å½“å‰å­¦ç”Ÿæˆç»©ä¸ºï¼š"<<ptr->getStudentScore()<<endl
-                <<"è¯·è¾“å…¥ä¿®æ”¹çš„å†…å®¹ï¼š";
+            cout<<"µ±Ç°Ñ§Éú³É¼¨Îª£º"<<ptr->getStudentScore()<<endl
+                <<"ÇëÊäÈëÐÞ¸ÄµÄÄÚÈÝ£º";
             cin>>tempScore;
             while(cin.fail()){
                 if(cin.fail()){
                     cin.clear();
-                    cout<<"è¾“å…¥çš„å†…å®¹ä¸åˆæ³•ï¼Œè¯·æ£€æŸ¥è¾“å…¥å†…å®¹åŽé‡æ–°è¾“å…¥(å›žè½¦ä»¥ç»§ç»­)"<<endl;
+                    cout<<"ÊäÈëµÄÄÚÈÝ²»ºÏ·¨£¬Çë¼ì²éÊäÈëÄÚÈÝºóÖØÐÂÊäÈë(»Ø³µÒÔ¼ÌÐø)"<<endl;
                     system("pause>nul");
-                    cout<<"å½“å‰å­¦ç”Ÿæˆç»©ä¸ºï¼š"<<ptr->getStudentScore()<<endl
-                        <<"è¯·è¾“å…¥ä¿®æ”¹çš„å†…å®¹ï¼š";
+                    cout<<"µ±Ç°Ñ§Éú³É¼¨Îª£º"<<ptr->getStudentScore()<<endl
+                        <<"ÇëÊäÈëÐÞ¸ÄµÄÄÚÈÝ£º";
                     while(cin.get()!='\n'){
                         continue;
                     }
@@ -297,10 +297,10 @@ int StudentsDatabase::editStudentInfo(){
                 }
             }
             ptr->setStudentScore(tempScore);
-            cout<<"å·²ä¿®æ”¹å­¦ç”Ÿæˆç»©ã€‚"<<endl;
+            cout<<"ÒÑÐÞ¸ÄÑ§Éú³É¼¨¡£"<<endl;
             break;
         case 3:
-            cout<<"æ­£åœ¨è¿”å›ž..."<<endl;
+            cout<<"ÕýÔÚ·µ»Ø..."<<endl;
             break;
     }
     return 0;  
