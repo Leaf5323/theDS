@@ -32,8 +32,9 @@ StudentsDatabase::StudentsDatabase(int count){
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-                system("pause");
+                cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+                system("pause>nul");
+                cout<<"请输入第"<<i+1<<"位学生学号：";
                 while(cin.get()!='\n'){
                     continue;
                 }
@@ -45,8 +46,9 @@ StudentsDatabase::StudentsDatabase(int count){
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-                system("pause");
+                cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+                system("pause>nul");
+                cout<<"请输入第"<<i+1<<"位学生姓名：";
                 while(cin.get()!='\n'){
                     continue;
                 }
@@ -58,8 +60,9 @@ StudentsDatabase::StudentsDatabase(int count){
         while(cin.fail()){
             if(cin.fail()){
                 cin.clear();
-                cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-                system("pause");
+                cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+                system("pause>nul");
+                cout<<"请输入第"<<i+1<<"位学生成绩：";
                 while(cin.get()!='\n'){
                     continue;
                 }
@@ -121,8 +124,9 @@ void StudentsDatabase::addStudent(){
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入第要添加的学生学号：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -134,8 +138,9 @@ void StudentsDatabase::addStudent(){
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入第要添加的学生姓名：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -146,8 +151,9 @@ void StudentsDatabase::addStudent(){
     cin>>tempScore;while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入第要添加的学生成绩：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -157,6 +163,8 @@ void StudentsDatabase::addStudent(){
     ptr3=new Student(tempID,tempName,tempScore);
     ptr3->setTheNext(NULL);
     ptr2->setTheNext(ptr3);
+    cout<<"添加成功~(回车以继续)"<<endl;
+    system("pause>nul");
 }
 int StudentsDatabase::deleteStudent(){
     Student* ptr1=NULL;
@@ -168,8 +176,9 @@ int StudentsDatabase::deleteStudent(){
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入删除学生的学号：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -178,23 +187,27 @@ int StudentsDatabase::deleteStudent(){
     }
     ptr1=this->findTarget(tempID);
     if(ptr1==NULL){
-        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        cout<<"未查找到学生，请检查输入的学号(回车以继续)"<<endl;
+        system("pause>nul");
         return 1;
     }
     ptr2=this->findPre(tempID);
     ptr2->setTheNext(ptr1->getNext());
     delete ptr1;
+    cout<<"删除成功~(回车以继续)"<<endl;
+    system("pause>nul");
     return 0;
 }
 int StudentsDatabase::inquiryStudentInfo(){
     double tempID;
-    cout<<"请输入要查询的学号："<<endl;
+    cout<<"请输入要查询的学号：";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入要查询的学号：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -203,12 +216,15 @@ int StudentsDatabase::inquiryStudentInfo(){
     }
     Student* ptr=this->findTarget(tempID);
     if(ptr==NULL){
-        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        cout<<"未查找到学生，请检查输入的学号(回车以继续)"<<endl;
+        system("pause>nul");
         return 1;
     }
     cout<<"查询结果："<<endl
         <<"学生姓名："<<ptr->getStudentName()<<endl
-        <<"学生成绩："<<ptr->getStudentScore()<<endl;
+        <<"学生成绩："<<ptr->getStudentScore()<<endl
+        <<"(回车以继续)"<<endl;
+    system("pause>nul");
     return 0;
 }
 int StudentsDatabase::editStudentInfo(){
@@ -217,13 +233,14 @@ int StudentsDatabase::editStudentInfo(){
     double tempID;
     string tempName;
     int tempScore;
-    cout<<"请输入要修改的学号："<<endl;
+    cout<<"请输入要修改的学号：";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
-            cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-            system("pause");
+            cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+            system("pause>nul");
+            cout<<"请输入要修改的学号：";
             while(cin.get()!='\n'){
                 continue;
             }
@@ -232,7 +249,8 @@ int StudentsDatabase::editStudentInfo(){
     }
     ptr=this->findTarget(tempID);
     if(ptr==NULL){
-        cout<<"未查找到学生，请检查输入的学号"<<endl;
+        cout<<"未查找到学生，请检查输入的学号(回车以继续)"<<endl;
+        system("pause>nul");
         return 1;
     }
     cout<<"请选择要修改的内容："<<endl
@@ -248,8 +266,10 @@ int StudentsDatabase::editStudentInfo(){
             while(cin.fail()){
                 if(cin.fail()){
                     cin.clear();
-                    cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-                    system("pause");
+                    cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+                    system("pause>nul");
+                    cout<<"当前学生姓名为："<<ptr->getStudentName()<<endl
+                        <<"请输入修改的内容：";
                     while(cin.get()!='\n'){
                         continue;
                     }
@@ -266,8 +286,10 @@ int StudentsDatabase::editStudentInfo(){
             while(cin.fail()){
                 if(cin.fail()){
                     cin.clear();
-                    cout<<"输入的内容不合法，请检查输入内容后重新输入"<<endl;
-                    system("pause");
+                    cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
+                    system("pause>nul");
+                    cout<<"当前学生成绩为："<<ptr->getStudentScore()<<endl
+                        <<"请输入修改的内容：";
                     while(cin.get()!='\n'){
                         continue;
                     }
