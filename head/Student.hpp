@@ -3,8 +3,8 @@ using namespace std;
 
 class Student{
     public:
-    Student(long=0,string="default",int=0);
-    long getStudentID();
+    Student(double=0,string="default",int=0);
+    double getStudentID();
     string getStudentName();
     int getStudentScore();
     Student* setTheNext(Student*);
@@ -12,18 +12,18 @@ class Student{
     void setStudentName(string);
     void setStudentScore(int);
     private:
-    long studentID;
+    double studentID;
     string studnetName;
     int studentScore;
     Student* theNext;
 };
 
-Student::Student(long id,string name,int score){
+Student::Student(double id,string name,int score){
     this->studentID=id>0?id:0;
     this->studnetName=name;
     this->studentScore=score>0?score:0;
 }
-long Student::getStudentID(){
+double Student::getStudentID(){
     return this->studentID;
 }
 string Student::getStudentName(){

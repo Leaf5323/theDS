@@ -6,8 +6,8 @@ class StudentsDatabase{
     public:
     StudentsDatabase(int);
     ~StudentsDatabase();
-    Student* findTarget(long);
-    Student* findPre(long);
+    Student* findTarget(double);
+    Student* findPre(double);
     void addStudent();
     int deleteStudent();
     int inquiryStudentInfo();
@@ -23,7 +23,7 @@ StudentsDatabase::StudentsDatabase(int count){
     Student* q=NULL;
     q=new Student;
     this->head=q;
-    long tempID;
+    double tempID;
     string tempName;
     int tempScore;
     for(int i=0;i<count;i++){
@@ -45,7 +45,7 @@ StudentsDatabase::~StudentsDatabase(){
 Student* StudentsDatabase::getHead(){
     return this->head;
 }
-Student* StudentsDatabase::findTarget(long targetID){
+Student* StudentsDatabase::findTarget(double targetID){
     Student* ptr1=NULL;
     Student* ptr2=NULL;
     Student* ptr3=NULL;
@@ -59,7 +59,7 @@ Student* StudentsDatabase::findTarget(long targetID){
     }
     return ptr3;
 }
-Student* StudentsDatabase::findPre(long targetID){
+Student* StudentsDatabase::findPre(double targetID){
     Student* ptr1=NULL;
     Student* ptr2=NULL;
     ptr1=this->head->getNext();
@@ -75,7 +75,7 @@ void StudentsDatabase::addStudent(){
     Student* ptr1=NULL;
     Student* ptr2=NULL;
     Student* ptr3=NULL;
-    long tempID;
+    double tempID;
     string tempName;
     int tempScore;
     ptr1=this->getHead()->getNext();
@@ -97,7 +97,7 @@ int StudentsDatabase::deleteStudent(){
     Student* ptr1=NULL;
     Student* ptr2=NULL;
     Student* ptr3=NULL;
-    long tempID;
+    double tempID;
     cout<<"请输入删除学生的学号：";
     cin>>tempID;
     ptr1=this->findTarget(tempID);
@@ -111,7 +111,7 @@ int StudentsDatabase::deleteStudent(){
     return 0;
 }
 int StudentsDatabase::inquiryStudentInfo(){
-    long tempID;
+    double tempID;
     cout<<"请输入要查询的学号："<<endl;
     cin>>tempID;
     Student* ptr=this->findTarget(tempID);
@@ -127,7 +127,7 @@ int StudentsDatabase::inquiryStudentInfo(){
 int StudentsDatabase::editStudentInfo(){
     Student* ptr=NULL;
     int choice=0;
-    long tempID;
+    double tempID;
     string tempName;
     int tempScore;
     cout<<"请输入要修改的学号："<<endl;
