@@ -3,22 +3,22 @@ using namespace std;
 
 class Student{
     public:
-    Student(double=0,string="default",int=0);
+    Student(double=0,string="default",float=0);
     double getStudentID();
     string getStudentName();
-    int getStudentScore();
+    float getStudentScore();
     Student* setTheNext(Student*);
     Student* getNext();
     void setStudentName(string);
-    void setStudentScore(int);
+    void setStudentScore(float);
     private:
     double studentID;
     string studnetName;
-    int studentScore;
+    float studentScore;
     Student* theNext;
 };
 
-Student::Student(double id,string name,int score){
+Student::Student(double id,string name,float score){
     this->studentID=id>0?id:0;
     this->studnetName=name;
     this->studentScore=score>0?score:0;
@@ -29,7 +29,7 @@ double Student::getStudentID(){
 string Student::getStudentName(){
     return this->studnetName;
 }
-int Student::getStudentScore(){
+float Student::getStudentScore(){
     return this->studentScore;
 }
 Student* Student::setTheNext(Student* next){
@@ -42,6 +42,6 @@ Student* Student::getNext(){
 void Student::setStudentName(string newName){
     this->studnetName=newName;
 }
-void Student::setStudentScore(int newScore){
+void Student::setStudentScore(float newScore){
     this->studentScore=newScore;
 }

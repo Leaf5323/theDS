@@ -7,7 +7,9 @@ int enterChoice();
 void renderMenu();
 
 int main(){
+    system("mode con cols=40 lines=20");
     system("title 初始化学生信息");
+    system("color f0");
     int initSize;
     cout<<"请输入初始学生人数：";
     cin>>initSize;
@@ -80,13 +82,14 @@ int enterChoice(){
     return choice;
 }
 void renderMenu(){
-    cout<<"##############################"<<endl
-        <<setw(20)<<setfill(' ')<<"主菜单"<<endl;
+    system("cls");
+    cout<<"########################################"<<endl
+        <<setw(26)<<setfill(' ')<<"主菜单"<<endl;
     cout<<"1)查询学生信息"<<endl
         <<"2)添加学生信息"<<endl
         <<"3)删除学生信息"<<endl
         <<"4)修改学生信息"<<endl
         <<"5)退出系统"<<endl
-        <<"##############################"<<endl;
+        <<"########################################"<<endl;
     cout<<"请输入你的选择：";
 }

@@ -25,7 +25,7 @@ StudentsDatabase::StudentsDatabase(int count){
     this->head=q;
     double tempID;
     string tempName;
-    int tempScore;
+    float tempScore;
     for(int i=0;i<count;i++){
         cout<<"请输入第"<<i+1<<"位学生学号：";
         cin>>tempID;
@@ -113,7 +113,7 @@ void StudentsDatabase::addStudent(){
     Student* ptr3=NULL;
     double tempID;
     string tempName;
-    int tempScore;
+    float tempScore;
     ptr1=this->getHead()->getNext();
     while(ptr1){
         ptr2=ptr1;
@@ -232,7 +232,7 @@ int StudentsDatabase::editStudentInfo(){
     int choice=0;
     double tempID;
     string tempName;
-    int tempScore;
+    float tempScore;
     cout<<"请输入要修改的学号：";
     cin>>tempID;
     while(cin.fail()){
