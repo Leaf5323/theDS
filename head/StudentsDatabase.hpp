@@ -119,41 +119,41 @@ void StudentsDatabase::addStudent(){
         ptr2=ptr1;
         ptr1=ptr1->getNext();
     }
-    cout<<"请输入第要添加的学生学号：";
+    cout<<"请输入要添加的学生学号：";
     cin>>tempID;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
             cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
             system("pause>nul");
-            cout<<"请输入第要添加的学生学号：";
+            cout<<"请输入要添加的学生学号：";
             while(cin.get()!='\n'){
                 continue;
             }
             cin>>tempID;
         }
     }
-    cout<<"请输入第要添加的学生姓名：";
+    cout<<"请输入要添加的学生姓名：";
     cin>>tempName;
     while(cin.fail()){
         if(cin.fail()){
             cin.clear();
             cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
             system("pause>nul");
-            cout<<"请输入第要添加的学生姓名：";
+            cout<<"请输入要添加的学生姓名：";
             while(cin.get()!='\n'){
                 continue;
             }
             cin>>tempName;
         }
     }
-    cout<<"请输入第要添加的学生成绩：";
+    cout<<"请输入要添加的学生成绩：";
     cin>>tempScore;while(cin.fail()){
         if(cin.fail()){
             cin.clear();
             cout<<"输入的内容不合法，请检查输入内容后重新输入(回车以继续)"<<endl;
             system("pause>nul");
-            cout<<"请输入第要添加的学生成绩：";
+            cout<<"请输入要添加的学生成绩：";
             while(cin.get()!='\n'){
                 continue;
             }
